@@ -8,6 +8,7 @@ namespace mchoice
 {
     static class Program
     {
+        /// this is a comment made using VS
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
