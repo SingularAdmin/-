@@ -28,5 +28,15 @@ namespace mchoice
             button1.BackColor = Color.FromArgb(255, 128, 0);
             button1.ForeColor = Color.White;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
