@@ -61,5 +61,21 @@ namespace mchoice
             this.Close();
 
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            var newForm = new forgetpasswordform();
+            newForm.Show();
+        }
+
+        private void label6_MouseHover(object sender, EventArgs e)
+        {
+            label6.Font = new Font(label6.Font.Name, 8.25f, FontStyle.Bold | FontStyle.Underline);
+        }
+
+        private void label6_MouseLeave(object sender, EventArgs e)
+        {
+            label6.Font = new Font(label6.Font.Name, 8.25f, FontStyle.Bold);
+        }
     }
 }

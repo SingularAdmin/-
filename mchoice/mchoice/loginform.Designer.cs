@@ -38,6 +38,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Errorlabel = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
@@ -150,12 +151,27 @@
             this.Errorlabel.Size = new System.Drawing.Size(0, 13);
             this.Errorlabel.TabIndex = 10;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Cornsilk;
+            this.label6.Location = new System.Drawing.Point(132, 272);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(108, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Forgot Password?";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.label6.MouseLeave += new System.EventHandler(this.label6_MouseLeave);
+            this.label6.MouseHover += new System.EventHandler(this.label6_MouseHover);
+            // 
             // loginform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(361, 421);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.Errorlabel);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -185,5 +201,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label Errorlabel;
+        private System.Windows.Forms.Label label6;
     }
 }
