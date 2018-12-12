@@ -52,23 +52,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="forgetpasswordform.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forgetpasswordform.Designer.cs">
-      <DependentUpon>forgetpasswordform.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="loginform.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="loginform.Designer.cs">
-      <DependentUpon>loginform.cs</DependentUpon>
     </Compile>
     <Compile Include="MCDataSet1.cs">
       <DependentUpon>MCDataSet1.xsd</DependentUpon>
@@ -80,20 +68,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="signupform.cs">
+    <Compile Include="UI\forgetpasswordform.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="signupform.Designer.cs">
+    <Compile Include="UI\forgetpasswordform.Designer.cs">
+      <DependentUpon>forgetpasswordform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\loginform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\loginform.Designer.cs">
+      <DependentUpon>loginform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\signupform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\signupform.Designer.cs">
       <DependentUpon>signupform.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="forgetpasswordform.resx">
-      <DependentUpon>forgetpasswordform.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="loginform.resx">
-      <DependentUpon>loginform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -104,7 +98,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="signupform.resx">
+    <EmbeddedResource Include="UI\forgetpasswordform.resx">
+      <DependentUpon>forgetpasswordform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\loginform.resx">
+      <DependentUpon>loginform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\signupform.resx">
       <DependentUpon>signupform.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="MCDataSet1.xsc">
