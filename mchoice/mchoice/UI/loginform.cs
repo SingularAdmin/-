@@ -19,21 +19,19 @@ namespace mchoice
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var newForm = new signupform();
-            newForm.Show();
-            this.Close();
+            
         }
 
         private void button1_MouseHover(object sender, EventArgs e)
         {
-            LoginButton.BackColor = Color.White;
-            LoginButton.ForeColor = Color.FromArgb(255, 128, 0);
+            loginButton.BackColor = Color.White;
+            loginButton.ForeColor = Color.FromArgb(255, 128, 0);
         }
 
         private void button1_MouseLeave(object sender, EventArgs e)
         {
-            LoginButton.BackColor = Color.FromArgb(255, 128, 0);
-            LoginButton.ForeColor = Color.White;
+            loginButton.BackColor = Color.FromArgb(255, 128, 0);
+            loginButton.ForeColor = Color.White;
         }
 
         private void button2_MouseHover(object sender, EventArgs e)
@@ -76,6 +74,28 @@ namespace mchoice
         private void label6_MouseLeave(object sender, EventArgs e)
         {
             label6.Font = new Font(label6.Font.Name, 8.25f, FontStyle.Bold);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            var newForm = new signupform();
+            newForm.Show();
+            this.Close();
+        }
+
+        private void loginform_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
