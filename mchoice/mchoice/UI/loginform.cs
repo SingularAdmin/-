@@ -33,7 +33,7 @@ namespace mchoice
             loginButton.BackColor = Color.FromArgb(255, 128, 0);
             loginButton.ForeColor = Color.White;
         }
-
+        /*
         private void button2_MouseHover(object sender, EventArgs e)
         {
             SignupButton.BackColor = Color.White;
@@ -45,7 +45,7 @@ namespace mchoice
             SignupButton.BackColor = Color.FromArgb(255, 128, 0);
             SignupButton.ForeColor = Color.White;
         }
-
+        */
         private void LoginButton_Click(object sender, EventArgs e)
         {
             /*
