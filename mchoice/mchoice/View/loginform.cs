@@ -4,14 +4,15 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace mchoice
 {
     public partial class loginform : Form
     {
+        Form1 parent = null;
         public loginform()
         {
             InitializeComponent();
@@ -19,7 +20,7 @@ namespace mchoice
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button1_MouseHover(object sender, EventArgs e)
@@ -48,15 +49,26 @@ namespace mchoice
         */
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            /*
-            if ()
+            string username = usernameText.Text;
+            string password = passwordText.Text;
+
+            DBConnect.Initialize();
+            DBConnect db = new DBConnect();
+
+            bool user = db.checkIfUserExists(username, password);
+
+            if (user)
             {
-                Errorlabel.Text = "Wrong Password";
-                
+                parent.userLoggedIn(username);
+                parent.Show();
+                DBConnect.CloseConnection();
+                this.Close();
+            }
+            else
+            {
+                changeBorderColor();
             }
 
-            else */
-            this.Close();
 
         }
 
@@ -96,6 +108,17 @@ namespace mchoice
         private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void changeBorderColor()
+        {
+            panel1.BackColor = Color.Red;
+            panel2.BackColor = Color.Red;
+        }
+
+        public void getParent(Form1 parent)
+        {
+            this.parent = parent;
         }
     }
 }
