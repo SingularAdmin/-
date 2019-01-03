@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using mchoice.Control;
 
 
 namespace mchoice
@@ -49,27 +50,7 @@ namespace mchoice
         */
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            string username = usernameText.Text;
-            string password = passwordText.Text;
-
-            DBConnect.Initialize();
-            DBConnect db = new DBConnect();
-
-            bool user = db.checkIfUserExists(username, password);
-
-            if (user)
-            {
-                parent.userLoggedIn(username);
-                parent.Show();
-                DBConnect.CloseConnection();
-                this.Close();
-            }
-            else
-            {
-                changeBorderColor();
-            }
-
-
+            WindowsController.checkLogin(this, parent);
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -110,7 +91,7 @@ namespace mchoice
 
         }
 
-        private void changeBorderColor()
+        public void changeBorderColor()
         {
             panel1.BackColor = Color.Red;
             panel2.BackColor = Color.Red;
@@ -119,6 +100,32 @@ namespace mchoice
         public void getParent(Form1 parent)
         {
             this.parent = parent;
+        }
+
+        public string Username
+        {
+            get
+            {
+                return usernameText.Text;
+            }
+
+            set
+            {
+                usernameText.Text = value;
+            }
+        }
+
+        public string Password
+        {
+            get
+            {
+                return passwordText.Text;
+            }
+
+            set
+            {
+                passwordText.Text = value;
+            }
         }
     }
 }

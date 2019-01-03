@@ -33,9 +33,7 @@ namespace mchoice
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
             WindowsController.showLogInWindow(this);
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -53,6 +51,11 @@ namespace mchoice
             LogSignbutton.Text = "Welcome " + username;
             LogSignbutton.Enabled = false;
             addQuizButton.Visible = true;
+        }
+
+        private void addQuizButton_Click(object sender, EventArgs e)
+        {
+            WindowsController.showAddQuizWindow(this);
         }
     }
 }
