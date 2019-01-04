@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace mchoice.Control
+namespace mchoice.Controls
 {
     public class WindowsController
     {
