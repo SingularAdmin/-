@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using mchoice.Controls;
 
 namespace mchoice
 {
@@ -15,6 +16,7 @@ namespace mchoice
         public Form1()
         {
             InitializeComponent();
+            //WindowState = FormWindowState.Maximized;
         }
 
         private void button1_MouseHover(object sender, EventArgs e)
@@ -31,13 +33,29 @@ namespace mchoice
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var newForm = new loginform();
-            newForm.Show();
+            WindowsController.showLogInWindow(this);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public void setValueAtSearchBOx(string value)
+        {
+            SearchBox.Text = value;
+        }
+
+        public void userLoggedIn(string username)
+        {
+            LogSignbutton.Text = "Welcome " + username;
+            LogSignbutton.Enabled = false;
+            addQuizButton.Visible = true;
+        }
+
+        private void addQuizButton_Click(object sender, EventArgs e)
+        {
+            WindowsController.showAddQuizWindow(this);
         }
     }
 }

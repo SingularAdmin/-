@@ -4,14 +4,16 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using mchoice.Controls;
+
 
 namespace mchoice
 {
     public partial class loginform : Form
     {
+        Form1 parent = null;
         public loginform()
         {
             InitializeComponent();
@@ -19,7 +21,7 @@ namespace mchoice
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button1_MouseHover(object sender, EventArgs e)
@@ -48,16 +50,7 @@ namespace mchoice
         */
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            /*
-            if ()
-            {
-                Errorlabel.Text = "Wrong Password";
-                
-            }
-
-            else */
-            this.Close();
-
+            WindowsController.checkLogin(this, parent);
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -96,6 +89,43 @@ namespace mchoice
         private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public void changeBorderColor()
+        {
+            panel1.BackColor = Color.Red;
+            panel2.BackColor = Color.Red;
+        }
+
+        public void getParent(Form1 parent)
+        {
+            this.parent = parent;
+        }
+
+        public string Username
+        {
+            get
+            {
+                return usernameText.Text;
+            }
+
+            set
+            {
+                usernameText.Text = value;
+            }
+        }
+
+        public string Password
+        {
+            get
+            {
+                return passwordText.Text;
+            }
+
+            set
+            {
+                passwordText.Text = value;
+            }
         }
     }
 }

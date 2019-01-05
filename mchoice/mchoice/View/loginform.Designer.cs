@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.usernameText = new System.Windows.Forms.TextBox();
+            this.passwordText = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.loginButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,22 +42,26 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // usernameText
             // 
-            this.textBox1.Location = new System.Drawing.Point(294, 97);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(201, 20);
-            this.textBox1.TabIndex = 0;
+            this.usernameText.Location = new System.Drawing.Point(0, 4);
+            this.usernameText.Name = "usernameText";
+            this.usernameText.Size = new System.Drawing.Size(201, 20);
+            this.usernameText.TabIndex = 0;
             // 
-            // textBox2
+            // passwordText
             // 
-            this.textBox2.Location = new System.Drawing.Point(294, 156);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(201, 20);
-            this.textBox2.TabIndex = 1;
+            this.passwordText.Location = new System.Drawing.Point(0, 4);
+            this.passwordText.Name = "passwordText";
+            this.passwordText.PasswordChar = '*';
+            this.passwordText.Size = new System.Drawing.Size(201, 20);
+            this.passwordText.TabIndex = 1;
             // 
             // label1
             // 
@@ -202,6 +206,24 @@
             this.label3.Text = "Sign up";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.usernameText);
+            this.panel1.Location = new System.Drawing.Point(292, 97);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(1);
+            this.panel1.Size = new System.Drawing.Size(203, 23);
+            this.panel1.TabIndex = 17;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.passwordText);
+            this.panel2.Location = new System.Drawing.Point(294, 153);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(1);
+            this.panel2.Size = new System.Drawing.Size(203, 23);
+            this.panel2.TabIndex = 18;
+            // 
             // loginform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,11 +242,15 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Name = "loginform";
             this.Text = "loginform";
             this.Load += new System.EventHandler(this.loginform_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,8 +258,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox usernameText;
+        private System.Windows.Forms.TextBox passwordText;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Label label2;
@@ -246,5 +272,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
