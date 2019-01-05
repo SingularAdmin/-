@@ -119,6 +119,12 @@
     <Compile Include="View\signupform.Designer.cs">
       <DependentUpon>signupform.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\testForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\testForm.Designer.cs">
+      <DependentUpon>testForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\AddQuizForm.resx">
       <DependentUpon>AddQuizForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\signupform.resx">
       <DependentUpon>signupform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\testForm.resx">
+      <DependentUpon>testForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />

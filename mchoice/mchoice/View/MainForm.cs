@@ -89,5 +89,22 @@ namespace mchoice
         {
             takeQuiz();
         }
+
+        private void fontDialog1_Apply(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            addQuizButton.Visible = false;
+            //if (logedIn)
+            //addQuizButton.Visible = true;
+        }
     }
 }
