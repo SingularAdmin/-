@@ -26,6 +26,14 @@ namespace mchoice.Controls
             
         }
 
+        public static void showQuizForm(Form1 parent)
+        {
+            parent.Hide();
+            quizForm add = new quizForm();
+            add.Show();
+            add.getParent(parent);
+        }
+
         public static void checkLogin(loginform loginform, Form1 parent)
         {
             string username = loginform.Username;

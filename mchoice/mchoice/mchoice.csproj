@@ -107,6 +107,12 @@
     <Compile Include="View\loginform.Designer.cs">
       <DependentUpon>loginform.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\quizForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\quizForm.Designer.cs">
+      <DependentUpon>quizForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\signupform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\loginform.resx">
       <DependentUpon>loginform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\quizForm.resx">
+      <DependentUpon>quizForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\signupform.resx">
       <DependentUpon>signupform.cs</DependentUpon>

@@ -57,5 +57,37 @@ namespace mchoice
         {
             WindowsController.showAddQuizWindow(this);
         }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void takeQuiz()
+        {
+            WindowsController.showQuizForm(this);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            takeQuiz();
+        }
+        
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            takeQuiz();
+        }
+
+        
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            takeQuiz();
+        }
     }
 }

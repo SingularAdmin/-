@@ -171,5 +171,21 @@ namespace mchoice.View
         {
             panel10.BringToFront();
         }
+
+        private void LogSignbutton_Click(object sender, EventArgs e)
+        {
+            var newForm = new loginform();
+            newForm.Show();
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button11_Click_1(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

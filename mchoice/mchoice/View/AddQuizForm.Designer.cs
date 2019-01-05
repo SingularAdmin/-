@@ -385,6 +385,7 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button11 = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             this.panel10.SuspendLayout();
             this.groupBox28.SuspendLayout();
@@ -432,6 +433,7 @@
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.mainPanel.Controls.Add(this.button11);
             this.mainPanel.Controls.Add(this.panel10);
             this.mainPanel.Controls.Add(this.panel9);
             this.mainPanel.Controls.Add(this.panel8);
@@ -3733,6 +3735,7 @@
             this.LogSignbutton.TabIndex = 7;
             this.LogSignbutton.Text = "Log in / Sign up";
             this.LogSignbutton.UseVisualStyleBackColor = false;
+            this.LogSignbutton.Click += new System.EventHandler(this.LogSignbutton_Click);
             // 
             // panel1
             // 
@@ -4071,6 +4074,16 @@
             this.label1.Size = new System.Drawing.Size(114, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "1st Question";
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(597, 12);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(75, 23);
+            this.button11.TabIndex = 23;
+            this.button11.Text = "button11";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click_1);
             // 
             // AddQuizForm
             // 
@@ -4526,5 +4539,6 @@
         private System.Windows.Forms.RadioButton radioButton60;
         private System.Windows.Forms.TextBox textBox75;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button button11;
     }
 }
