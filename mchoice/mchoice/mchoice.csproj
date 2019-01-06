@@ -80,6 +80,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\DBConnect.cs" />
+    <Compile Include="Controls\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\WindowsController.cs" />
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
@@ -125,6 +131,15 @@
     <Compile Include="View\testForm.Designer.cs">
       <DependentUpon>testForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\AddQuizWUserControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddQuizWUserControl.Designer.cs">
+      <DependentUpon>AddQuizWUserControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controls\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\AddQuizForm.resx">
       <DependentUpon>AddQuizForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\testForm.resx">
       <DependentUpon>testForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddQuizWUserControl.resx">
+      <DependentUpon>AddQuizWUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />

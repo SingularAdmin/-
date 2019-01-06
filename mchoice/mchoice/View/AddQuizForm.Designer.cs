@@ -453,6 +453,7 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(854, 501);
             this.mainPanel.TabIndex = 0;
+            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // panel10
             // 
@@ -3699,6 +3700,7 @@
             this.createQuizButton.TabIndex = 10;
             this.createQuizButton.Text = "Create Quiz";
             this.createQuizButton.UseVisualStyleBackColor = false;
+            this.createQuizButton.Click += new System.EventHandler(this.createQuizButton_Click);
             // 
             // SearchBox
             // 
@@ -4081,6 +4083,7 @@
             this.Controls.Add(this.mainPanel);
             this.Name = "AddQuizForm";
             this.Text = "Add Quiz";
+            this.Load += new System.EventHandler(this.AddQuizForm_Load);
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
             this.panel10.ResumeLayout(false);

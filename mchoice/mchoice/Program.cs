@@ -18,7 +18,7 @@ namespace mchoice
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddQuizForm());
+            Application.Run(new AddQuizWUserControl());
         }
     }
 }
