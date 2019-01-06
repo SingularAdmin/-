@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using mchoice.Control;
+using mchoice.Controls;
 
 namespace mchoice
 {
@@ -33,9 +33,7 @@ namespace mchoice
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
             WindowsController.showLogInWindow(this);
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -53,6 +51,43 @@ namespace mchoice
             LogSignbutton.Text = "Welcome " + username;
             LogSignbutton.Enabled = false;
             addQuizButton.Visible = true;
+        }
+
+        private void addQuizButton_Click(object sender, EventArgs e)
+        {
+            WindowsController.showAddQuizWindow(this);
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void takeQuiz()
+        {
+            WindowsController.showQuizForm(this);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            takeQuiz();
+        }
+        
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            takeQuiz();
+        }
+
+        
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            takeQuiz();
         }
     }
 }
