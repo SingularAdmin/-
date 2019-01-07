@@ -24,6 +24,7 @@ namespace mchoice.View
         private void userControlTst_Load(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Add(uc);
+            tag++;
             checkLabel();
         }
 
@@ -43,12 +44,12 @@ namespace mchoice.View
 
         private void removeLastButton_Click(object sender, EventArgs e)
         {
+            tag--;
             if (tag == 1)
                 removeLastButton.Enabled = false;
             if (tag <= 15)
                 CreateQuizButton.Enabled = false;
-            flowLayoutPanel1.Controls.RemoveAt(tag);
-            tag--;
+            flowLayoutPanel1.Controls.RemoveAt(tag);            
             checkLabel();
             Console.WriteLine(tag);
         }
@@ -62,7 +63,7 @@ namespace mchoice.View
             if (tag > 0)
             {
                 label1.Visible = true;
-                label1.Text = "You need at least: " + (15 - tag) + " questions";
+                label1.Text = "You need : " + (15 - tag) + " more questions";
             }                
 
             if (15 - tag == 0)
