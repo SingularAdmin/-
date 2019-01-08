@@ -385,7 +385,6 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button11 = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             this.panel10.SuspendLayout();
             this.groupBox28.SuspendLayout();
@@ -433,7 +432,6 @@
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.mainPanel.Controls.Add(this.button11);
             this.mainPanel.Controls.Add(this.panel10);
             this.mainPanel.Controls.Add(this.panel9);
             this.mainPanel.Controls.Add(this.panel8);
@@ -455,6 +453,7 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(854, 501);
             this.mainPanel.TabIndex = 0;
+            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // panel10
             // 
@@ -3701,6 +3700,7 @@
             this.createQuizButton.TabIndex = 10;
             this.createQuizButton.Text = "Create Quiz";
             this.createQuizButton.UseVisualStyleBackColor = false;
+            this.createQuizButton.Click += new System.EventHandler(this.createQuizButton_Click);
             // 
             // SearchBox
             // 
@@ -4075,16 +4075,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "1st Question";
             // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(597, 12);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 23;
-            this.button11.Text = "button11";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click_1);
-            // 
             // AddQuizForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4093,6 +4083,7 @@
             this.Controls.Add(this.mainPanel);
             this.Name = "AddQuizForm";
             this.Text = "Add Quiz";
+            this.Load += new System.EventHandler(this.AddQuizForm_Load);
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
             this.panel10.ResumeLayout(false);
@@ -4539,6 +4530,5 @@
         private System.Windows.Forms.RadioButton radioButton60;
         private System.Windows.Forms.TextBox textBox75;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button button11;
     }
 }
