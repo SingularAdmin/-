@@ -32,6 +32,7 @@
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.addQuizButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -56,7 +57,6 @@
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
             this.LogSignbutton = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -69,10 +69,34 @@
             this.checkedListBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Category1",
-            "Category2",
-            "..."});
+            this.checkedListBox1.Items.AddRange(new object[] 
+            {
+            "Entertainment",
+            "Science",
+            "Science & Nature",
+            "Politics",
+            "Geography",
+            "Vehicles",
+            "Sports",
+            "Celebrities",
+            "Animals",
+            "Art",
+            "Mythology",
+            "Video Games",
+            "Television",
+            "Japanese Anime & Manga",
+            "Music",
+            "Cartoon & Animations",
+            "Comics",
+            "Film",
+            "Books",
+            "Musicals & Theatres",
+            "Board Games",
+            "Gadgets",
+            "Computers",
+            "Mathematics",
+            "History",
+            "General Knowledge"});
             this.checkedListBox1.Location = new System.Drawing.Point(25, 145);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(147, 259);
@@ -105,6 +129,16 @@
             this.panel1.Size = new System.Drawing.Size(854, 501);
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.button4.Location = new System.Drawing.Point(12, 116);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(171, 23);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "Load Categories from DBase";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -344,6 +378,37 @@
             // 
             this.SearchBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.SearchBox.AutoCompleteCustomSource.AddRange(new string[] 
+            {
+            "Entertainment",
+            "Science",
+            "Science & Nature",
+            "Politics",
+            "Geography",
+            "Vehicles",
+            "Sports",
+            "Celebrities",
+            "Animals",
+            "Art",
+            "Mythology",
+            "Video Games",
+            "Television",
+            "Japanese Anime & Manga",
+            "Music",
+            "Cartoon & Animations",
+            "Comics",
+            "Film",
+            "Books",
+            "Musicals & Theatres",
+            "Board Games",
+            "Gadgets",
+            "Computers",
+            "Mathematics",
+            "History",
+            "General Knowledge"
+            });
+            this.SearchBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.SearchBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.SearchBox.Location = new System.Drawing.Point(291, 16);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(197, 20);
@@ -377,16 +442,6 @@
             this.LogSignbutton.Click += new System.EventHandler(this.button1_Click);
             this.LogSignbutton.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             this.LogSignbutton.MouseHover += new System.EventHandler(this.button1_MouseHover);
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.button4.Location = new System.Drawing.Point(12, 116);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(171, 23);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Load Categories from DBase";
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

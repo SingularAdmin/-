@@ -59,6 +59,12 @@
     <Reference Include="MySql.Data, Version=8.0.13.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.0.13\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="PdfSharp, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.Charting.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -79,12 +85,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\QuestionTitles.cs" />
     <Compile Include="Controls\DBConnect.cs" />
-    <Compile Include="Controls\UserControl1.cs">
+    <Compile Include="Controls\MultipleChoice.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="Controls\MultipleChoice.Designer.cs">
+      <DependentUpon>MultipleChoice.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\WindowsController.cs" />
     <Compile Include="View\MainForm.cs">
@@ -137,8 +144,8 @@
     <Compile Include="View\AddQuizWUserControl.Designer.cs">
       <DependentUpon>AddQuizWUserControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Controls\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\MultipleChoice.resx">
+      <DependentUpon>MultipleChoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\AddQuizForm.resx">
       <DependentUpon>AddQuizForm.cs</DependentUpon>
