@@ -164,7 +164,7 @@
             this.Controls.Add(this.addQuestionButton);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "AddQuizWUserControl";
-            this.Text = "userControlTst";
+            this.Text = "Multiple Choice Creator";
             this.Load += new System.EventHandler(this.userControlTst_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
