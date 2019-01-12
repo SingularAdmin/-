@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using mchoice.Controls;
-
+using mchoice.LuceneFile;
 namespace mchoice
 {
     public partial class Form1 : Form
@@ -105,6 +105,12 @@ namespace mchoice
             addQuizButton.Visible = false;
             //if (logedIn)
             //addQuizButton.Visible = true;
+        }
+
+        private void searchButton_MouseClick(object sender, MouseEventArgs e)
+        {
+            LuceneInit lucene = new LuceneInit();
+            IEnumerable<SampleDataFileRow> results = lucene.Search(this.Text);
         }
     }
 }

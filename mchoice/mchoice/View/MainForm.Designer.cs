@@ -69,8 +69,7 @@
             this.checkedListBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] 
-            {
+            this.checkedListBox1.Items.AddRange(new object[] {
             "Entertainment",
             "Science",
             "Science & Nature",
@@ -378,8 +377,7 @@
             // 
             this.SearchBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.SearchBox.AutoCompleteCustomSource.AddRange(new string[] 
-            {
+            this.SearchBox.AutoCompleteCustomSource.AddRange(new string[] {
             "Entertainment",
             "Science",
             "Science & Nature",
@@ -405,8 +403,7 @@
             "Computers",
             "Mathematics",
             "History",
-            "General Knowledge"
-            });
+            "General Knowledge"});
             this.SearchBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.SearchBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.SearchBox.Location = new System.Drawing.Point(291, 16);
@@ -425,6 +422,7 @@
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
             this.searchButton.Click += new System.EventHandler(this.button2_Click);
+            this.searchButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.searchButton_MouseClick);
             // 
             // LogSignbutton
             // 
