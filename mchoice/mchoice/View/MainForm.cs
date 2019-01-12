@@ -112,5 +112,10 @@ namespace mchoice
             LuceneInit lucene = new LuceneInit();
             IEnumerable<SampleDataFileRow> results = lucene.Search(this.Text);
         }
+
+        private void SearchBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

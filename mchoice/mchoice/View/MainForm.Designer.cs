@@ -162,7 +162,7 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(254, 129);
+            this.panel2.Location = new System.Drawing.Point(232, 119);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(588, 350);
             this.panel2.TabIndex = 6;
@@ -410,6 +410,7 @@
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(197, 20);
             this.SearchBox.TabIndex = 1;
+            this.SearchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
             // 
             // searchButton
             // 
