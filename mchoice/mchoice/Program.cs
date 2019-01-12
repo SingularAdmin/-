@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using mchoice.View;
+using mchoice.LuceneFile;
 
 namespace mchoice
 {
@@ -16,9 +17,19 @@ namespace mchoice
         [STAThread]
         static void Main()
         {
+            //initialise Lucene
+            LuceneInit luIn = new LuceneInit();
+            SampleDataFileReader fileReader = new SampleDataFileReader();
+            IEnumerable<SampleDataFileRow> row = fileReader.ReadAllRowsDB();
+            luIn.BuildIndex(row);
+
+
+            ////
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new AddQuizWUserControl());
+
+
         }
     }
 }
