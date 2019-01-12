@@ -165,6 +165,12 @@
     <Compile Include="View\AddQuizWUserControl.Designer.cs">
       <DependentUpon>AddQuizWUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\testMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\testMainForm.Designer.cs">
+      <DependentUpon>testMainForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Controls\MultipleChoice.resx">
       <DependentUpon>MultipleChoice.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\AddQuizWUserControl.resx">
       <DependentUpon>AddQuizWUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\testMainForm.resx">
+      <DependentUpon>testMainForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="MCDataSet1.xsc">
