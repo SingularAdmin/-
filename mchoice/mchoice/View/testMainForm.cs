@@ -17,20 +17,11 @@ namespace mchoice.View
             InitializeComponent();
         }
 
-        private void SearchBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SearchBox_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
         private void addQuizButton_Click(object sender, EventArgs e)
         {
             var qForm = new AddQuizWUserControl();
             qForm.Show();
         }
+
     }
 }

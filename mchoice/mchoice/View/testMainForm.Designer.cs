@@ -97,7 +97,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(227, 64);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(588, 350);
+            this.panel2.Size = new System.Drawing.Size(672, 350);
             this.panel2.TabIndex = 13;
             // 
             // pictureBox3
@@ -339,8 +339,6 @@
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(260, 20);
             this.SearchBox.TabIndex = 9;
-            this.SearchBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SearchBox_MouseClick);
-            this.SearchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
             // 
             // checkedListBox1
             // 
