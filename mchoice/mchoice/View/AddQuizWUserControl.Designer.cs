@@ -143,7 +143,7 @@
             this.printButton.Enabled = false;
             this.printButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.printButton.Location = new System.Drawing.Point(37, 251);
+            this.printButton.Location = new System.Drawing.Point(37, 235);
             this.printButton.Name = "printButton";
             this.printButton.Size = new System.Drawing.Size(126, 44);
             this.printButton.TabIndex = 17;

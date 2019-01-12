@@ -27,7 +27,7 @@ namespace mchoice
             ////
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddQuizWUserControl());
+            Application.Run(new testMainForm());
 
 
         }
