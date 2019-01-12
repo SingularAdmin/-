@@ -339,6 +339,7 @@
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(260, 20);
             this.SearchBox.TabIndex = 9;
+            this.SearchBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SearchBox_MouseClick);
             this.SearchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
             // 
             // checkedListBox1
@@ -397,7 +398,7 @@
             this.addQuizButton.TabIndex = 12;
             this.addQuizButton.Text = "Add Quiz";
             this.addQuizButton.UseVisualStyleBackColor = true;
-            this.addQuizButton.Visible = false;
+            this.addQuizButton.Click += new System.EventHandler(this.addQuizButton_Click);
             // 
             // LogSignbutton
             // 

@@ -21,5 +21,16 @@ namespace mchoice.View
         {
 
         }
+
+        private void SearchBox_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void addQuizButton_Click(object sender, EventArgs e)
+        {
+            var qForm = new AddQuizWUserControl();
+            qForm.Show();
+        }
     }
 }
