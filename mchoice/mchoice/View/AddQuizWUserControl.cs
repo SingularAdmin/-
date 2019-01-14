@@ -29,6 +29,8 @@ namespace mchoice.View
         int qNumber = 0;
         private void userControlTst_Load(object sender, EventArgs e)
         {
+            this.CenterToScreen();
+            MultipleChoice uc = new MultipleChoice();
             flowLayoutPanel1.Controls.Add(uc);
             qNumber++;
             checkLabel();

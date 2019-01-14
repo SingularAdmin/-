@@ -41,7 +41,8 @@ namespace mchoice.View
 
         private void testMainForm_Load(object sender, EventArgs e)
         {
-            for(int i = 0; i<3; i++)
+            this.CenterToScreen();
+            for (int i = 0; i<3; i++)
             {
                 quizUserControl quc = new quizUserControl();
                 flowLayoutPanel1.Controls.Add(quc);
@@ -51,6 +52,18 @@ namespace mchoice.View
         private void button1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void addQuizButton_Click_1(object sender, EventArgs e)
+        {
+            var addQuiz = new AddQuizWUserControl();
+            addQuiz.Show();
+        }
+
+        private void LogSignbutton_Click_1(object sender, EventArgs e)
+        {
+            var loginForm = new loginform();
+            loginForm.Show();
         }
     }
 }

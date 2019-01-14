@@ -83,7 +83,7 @@ namespace mchoice
 
         private void loginform_Load(object sender, EventArgs e)
         {
-
+            this.CenterToScreen();
         }
 
         private void label7_Click(object sender, EventArgs e)

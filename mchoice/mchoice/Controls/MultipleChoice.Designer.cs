@@ -48,6 +48,8 @@
             this.questionTitle.Name = "questionTitle";
             this.questionTitle.Size = new System.Drawing.Size(436, 20);
             this.questionTitle.TabIndex = 0;
+            this.questionTitle.Text = "Question Title";
+            this.questionTitle.Enter += new System.EventHandler(this.questionTitle_Enter);
             // 
             // textBox2
             // 
@@ -56,6 +58,8 @@
             this.textBox2.Size = new System.Drawing.Size(259, 20);
             this.textBox2.TabIndex = 1;
             this.textBox2.Tag = "1";
+            this.textBox2.Text = "Answer 1";
+            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
             // 
             // textBox3
             // 
@@ -64,6 +68,8 @@
             this.textBox3.Size = new System.Drawing.Size(259, 20);
             this.textBox3.TabIndex = 2;
             this.textBox3.Tag = "2";
+            this.textBox3.Text = "Answer 2";
+            this.textBox3.Enter += new System.EventHandler(this.textBox3_Enter);
             // 
             // textBox4
             // 
@@ -72,6 +78,8 @@
             this.textBox4.Size = new System.Drawing.Size(259, 20);
             this.textBox4.TabIndex = 3;
             this.textBox4.Tag = "3";
+            this.textBox4.Text = "Answer 3";
+            this.textBox4.Enter += new System.EventHandler(this.textBox4_Enter);
             // 
             // textBox5
             // 
@@ -80,6 +88,8 @@
             this.textBox5.Size = new System.Drawing.Size(259, 20);
             this.textBox5.TabIndex = 4;
             this.textBox5.Tag = "4";
+            this.textBox5.Text = "Answer 4";
+            this.textBox5.Enter += new System.EventHandler(this.textBox5_Enter);
             // 
             // radioButton1
             // 

@@ -22,8 +22,7 @@ namespace mchoice.Controls
             parent.Hide();
             AddQuizForm add = new AddQuizForm();
             add.Show();
-            add.getParent(parent);
-            
+            add.getParent(parent);            
         }
 
         public static void showQuizForm(Form1 parent)
@@ -56,7 +55,5 @@ namespace mchoice.Controls
                 loginform.changeBorderColor();
             }
         }
-
-
     }
 }

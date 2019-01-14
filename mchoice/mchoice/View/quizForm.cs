@@ -21,12 +21,19 @@ namespace mchoice.View
 
         private void quizForm_Load(object sender, EventArgs e)
         {
-
+            this.CenterToScreen();
         }
 
         public void getParent(Form1 parent)
         {
             this.parent = parent;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var tstForm = new testForm();
+            this.Visible = false;
+            tstForm.Show();
         }
     }
 }

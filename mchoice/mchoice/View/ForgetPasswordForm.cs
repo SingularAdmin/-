@@ -16,5 +16,10 @@ namespace mchoice
         {
             InitializeComponent();
         }
+
+        private void forgetpasswordform_Load(object sender, EventArgs e)
+        {
+            this.CenterToScreen();
+        }
     }
 }

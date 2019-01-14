@@ -30,5 +30,11 @@ namespace mchoice.Controls
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var takeQuiz = new quizForm();
+            takeQuiz.Show();
+        }
     }
 }
