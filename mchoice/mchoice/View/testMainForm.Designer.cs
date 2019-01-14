@@ -28,30 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.LogSignbutton = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.addQuizButton = new System.Windows.Forms.Button();
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.mCDataSet1 = new mchoice.MCDataSet1();
+            this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.categoryTableAdapter = new mchoice.MCDataSet1TableAdapters.CategoryTableAdapter();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mCDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.treeView1);
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.LogSignbutton);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.addQuizButton);
             this.panel1.Controls.Add(this.SearchBox);
             this.panel1.Controls.Add(this.searchButton);
-            this.panel1.Controls.Add(this.checkedListBox1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(774, 481);
             this.panel1.TabIndex = 0;
+            // 
+            // treeView1
+            // 
+            this.treeView1.CheckBoxes = true;
+            this.treeView1.Location = new System.Drawing.Point(18, 140);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(188, 258);
+            this.treeView1.TabIndex = 33;
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // flowLayoutPanel1
             // 
@@ -85,8 +100,9 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(159, 23);
             this.button4.TabIndex = 30;
-            this.button4.Text = "Load Categories from DBase";
+            this.button4.Text = "Load Categories";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // addQuizButton
             // 
@@ -147,42 +163,19 @@
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
             // 
-            // checkedListBox1
+            // mCDataSet1
             // 
-            this.checkedListBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Entertainment",
-            "Science",
-            "Science & Nature",
-            "Politics",
-            "Geography",
-            "Vehicles",
-            "Sports",
-            "Celebrities",
-            "Animals",
-            "Art",
-            "Mythology",
-            "Video Games",
-            "Television",
-            "Japanese Anime & Manga",
-            "Music",
-            "Cartoon & Animations",
-            "Comics",
-            "Film",
-            "Books",
-            "Musicals & Theatres",
-            "Board Games",
-            "Gadgets",
-            "Computers",
-            "Mathematics",
-            "History",
-            "General Knowledge"});
-            this.checkedListBox1.Location = new System.Drawing.Point(18, 140);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(159, 259);
-            this.checkedListBox1.TabIndex = 28;
+            this.mCDataSet1.DataSetName = "MCDataSet1";
+            this.mCDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // categoryBindingSource
+            // 
+            this.categoryBindingSource.DataMember = "Category";
+            this.categoryBindingSource.DataSource = this.mCDataSet1;
+            // 
+            // categoryTableAdapter
+            // 
+            this.categoryTableAdapter.ClearBeforeFill = true;
             // 
             // testMainForm
             // 
@@ -195,6 +188,8 @@
             this.Load += new System.EventHandler(this.testMainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mCDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -208,6 +203,9 @@
         private System.Windows.Forms.Button addQuizButton;
         private System.Windows.Forms.TextBox SearchBox;
         private System.Windows.Forms.Button searchButton;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private MCDataSet1 mCDataSet1;
+        private System.Windows.Forms.BindingSource categoryBindingSource;
+        private MCDataSet1TableAdapters.CategoryTableAdapter categoryTableAdapter;
+        private System.Windows.Forms.TreeView treeView1;
     }
 }

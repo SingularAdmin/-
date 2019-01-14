@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.addQuizButton = new System.Windows.Forms.Button();
@@ -57,11 +58,19 @@
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
             this.LogSignbutton = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.mCDataSet = new mchoice.MCDataSet();
+            this.mCDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Categories = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Enable = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mCDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mCDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // checkedListBox1
@@ -96,7 +105,7 @@
             "Mathematics",
             "History",
             "General Knowledge"});
-            this.checkedListBox1.Location = new System.Drawing.Point(25, 145);
+            this.checkedListBox1.Location = new System.Drawing.Point(194, 69);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(147, 259);
             this.checkedListBox1.TabIndex = 4;
@@ -115,10 +124,10 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.SearchBox);
-            this.panel1.Controls.Add(this.checkedListBox1);
             this.panel1.Controls.Add(this.searchButton);
             this.panel1.Controls.Add(this.addQuizButton);
             this.panel1.Controls.Add(this.LogSignbutton);
@@ -138,6 +147,7 @@
             this.button4.TabIndex = 7;
             this.button4.Text = "Load Categories from DBase";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel2
             // 
@@ -145,6 +155,7 @@
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.checkedListBox1);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label12);
@@ -442,6 +453,40 @@
             this.LogSignbutton.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             this.LogSignbutton.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Categories,
+            this.Enable});
+            this.dataGridView1.DataSource = this.mCDataSetBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 149);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(171, 261);
+            this.dataGridView1.TabIndex = 8;
+            // 
+            // mCDataSet
+            // 
+            this.mCDataSet.DataSetName = "MCDataSet";
+            this.mCDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mCDataSetBindingSource
+            // 
+            this.mCDataSetBindingSource.DataSource = this.mCDataSet;
+            this.mCDataSetBindingSource.Position = 0;
+            // 
+            // Categories
+            // 
+            this.Categories.HeaderText = "Categories";
+            this.Categories.Name = "Categories";
+            this.Categories.ReadOnly = true;
+            // 
+            // Enable
+            // 
+            this.Enable.HeaderText = "Enable";
+            this.Enable.Name = "Enable";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -459,6 +504,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mCDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mCDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -492,6 +540,11 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Categories;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Enable;
+        private System.Windows.Forms.BindingSource mCDataSetBindingSource;
+        private MCDataSet mCDataSet;
     }
 }
 
