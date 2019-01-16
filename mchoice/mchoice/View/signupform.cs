@@ -36,5 +36,10 @@ namespace mchoice
             SignupButton.BackColor = Color.FromArgb(255, 128, 0);
             SignupButton.ForeColor = Color.White;
         }
+
+        private void signupform_Load(object sender, EventArgs e)
+        {
+            this.CenterToScreen();
+        }
     }
 }

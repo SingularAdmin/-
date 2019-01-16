@@ -125,6 +125,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MCDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MCDataSet11.cs">
+      <DependentUpon>MCDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MCDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MCDataSet11.xsd</DependentUpon>
+    </Compile>
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +243,17 @@
     </None>
     <None Include="MCDataSet1.xss">
       <DependentUpon>MCDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MCDataSet11.xsc">
+      <DependentUpon>MCDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="MCDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MCDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MCDataSet11.xss">
+      <DependentUpon>MCDataSet11.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

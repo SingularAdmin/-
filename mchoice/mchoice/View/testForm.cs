@@ -43,6 +43,7 @@ namespace mchoice.View
 
         private void testForm_Load(object sender, EventArgs e)
         {
+            this.CenterToScreen();
             timeLeft = 600;
             timer1.Start();
             previousButton.Enabled = false;

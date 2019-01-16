@@ -93,8 +93,5 @@ namespace mchoice
             dataReader.Close();
             return false;
         }
-        
     }
-
-    
 }

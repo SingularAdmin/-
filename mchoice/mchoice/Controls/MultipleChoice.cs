@@ -84,5 +84,30 @@ namespace mchoice.Controls
                 }
             }
         }
+
+        private void questionTitle_Enter(object sender, EventArgs e)
+        {
+            questionTitle.Text = "";
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+            textBox2.Text = "";
+        }
+
+        private void textBox3_Enter(object sender, EventArgs e)
+        {
+            textBox3.Text = "";
+        }
+
+        private void textBox4_Enter(object sender, EventArgs e)
+        {
+            textBox4.Text = "";
+        }
+
+        private void textBox5_Enter(object sender, EventArgs e)
+        {
+            textBox5.Text = "";
+        }
     }
 }
