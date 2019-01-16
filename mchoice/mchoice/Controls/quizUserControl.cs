@@ -18,17 +18,42 @@ namespace mchoice.Controls
             InitializeComponent();
         }
 
-        public string quiz
+        public string Title
         {
             get
             {
-                return label1.Text;
+                return titleL.Text;
+            }
+            set
+            {
+                titleL.Text = value;
             }
         }
 
-        private void quizUserControl_Load(object sender, EventArgs e)
+        public string rating
         {
-
+            get
+            {
+                return ratingL.Text;
+            }
+            set
+            {
+                ratingL.Text = value;
+            }
         }
+
+        public string description
+        {
+            get
+            {
+                return descriptionL.Text;
+            }
+            set
+            {
+                descriptionL.Text = value;
+            }
+        }
+
+
     }
 }

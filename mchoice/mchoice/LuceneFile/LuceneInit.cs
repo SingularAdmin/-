@@ -24,14 +24,17 @@ namespace mchoice.LuceneFile
         private IndexWriter writer;
         private string indexPath = @"c:\temp\LuceneIndex";
 
-        public LuceneInit()
+        public LuceneInit(Boolean build)
         {
-            InitialiseLucene();
+            if (build) {
+                LuceneBuild();
+            } else {
+                InitialiseLucene();
+            }
+           
         }
 
-
-        private void InitialiseLucene()
-        {
+        public void LuceneBuild() {
             if (System.IO.Directory.Exists(indexPath))
             {
                 System.IO.Directory.Delete(indexPath, true);
@@ -40,6 +43,12 @@ namespace mchoice.LuceneFile
             luceneIndexDirectory = FSDirectory.Open(indexPath);
             writer = new IndexWriter(luceneIndexDirectory, analyzer, true, IndexWriter.MaxFieldLength.LIMITED);
         }
+
+        private void InitialiseLucene()
+        {
+            luceneIndexDirectory = FSDirectory.Open(indexPath);
+        }
+
 
         public void BuildIndex(IEnumerable<SampleDataFileRow> dataToIndex)
         {
@@ -54,15 +63,21 @@ namespace mchoice.LuceneFile
                 sampleDataFileRow.LineText,
                 Field.Store.YES,
                 Field.Index.ANALYZED));
-                writer.AddDocument(doc);
+                doc.Add(new Field("ID",
+                sampleDataFileRow.Id.ToString(),
+                Field.Store.YES,
+                Field.Index.NOT_ANALYZED));
+            writer.AddDocument(doc);
             }
             writer.Optimize();
-            //writer.Commit();
+            writer.Commit();
             writer.Dispose();
+            luceneIndexDirectory.Dispose();
         }
 
         public List<SampleDataFileRow> Search(string searchTerm)
         {
+
             IndexSearcher searcher = new IndexSearcher(luceneIndexDirectory);
             QueryParser parser = new QueryParser(Lucene.Net.Util.Version.LUCENE_30, "LineText", analyzer);
 
@@ -80,11 +95,11 @@ namespace mchoice.LuceneFile
                 Document doc = searcher.Doc(sd.Doc);
                 sampleDataFileRow.LineNumber = int.Parse(doc.Get("LineNumber"));
                 sampleDataFileRow.LineText = doc.Get("LineText");
+                sampleDataFileRow.Id = int.Parse(doc.Get("ID"));
                 results.Add(sampleDataFileRow);
             }
             luceneIndexDirectory.Dispose();
             return results.OrderByDescending(x => x.Score).ToList();
-
 
         }
 
@@ -111,14 +126,15 @@ namespace mchoice.LuceneFile
         {
             DBController mydbC = new DBController();
             MCDataSet.MediaDataTable media = mydbC.getMedia();
-
+            //System.Diagnostics.Debug.WriteLine("debug: "+media.Rows[0]["link"].ToString());
             foreach (DataRow row in media.Rows)
             {
                 yield return new SampleDataFileRow
                 {
 
                     LineNumber = media.Rows.IndexOf(row),
-                    LineText = row["link"].ToString()
+                    LineText = row["link"].ToString(),
+                    Id = (Int32)row["mediaID"]
                 };
             }
             /*

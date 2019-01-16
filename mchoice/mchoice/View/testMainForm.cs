@@ -35,8 +35,7 @@ namespace mchoice.View
 
         private void SearchBox_MouseClick(object sender, MouseEventArgs e)
         {
-            LuceneInit lucene = new LuceneInit();
-            IEnumerable<SampleDataFileRow> results = lucene.Search(this.Text);
+
         }
 
         private void testMainForm_Load(object sender, EventArgs e)

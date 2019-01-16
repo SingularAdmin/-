@@ -109,8 +109,22 @@ namespace mchoice
 
         private void searchButton_MouseClick(object sender, MouseEventArgs e)
         {
-            LuceneInit lucene = new LuceneInit();
-            IEnumerable<SampleDataFileRow> results = lucene.Search(this.Text);
+            LuceneInit lucene = new LuceneInit(false);
+            List<SampleDataFileRow> results = lucene.Search(" and ");
+            QuizContainerList qcl = new QuizContainerList();
+            /*
+            foreach (SampleDataFileRow i in results) {
+                System.Diagnostics.Debug.WriteLine("test: " + i.LineText);
+            }
+            */
+            
+            List<quizUserControl> q = qcl.getQuizList(results);
+            foreach (quizUserControl item in q) {
+                quizContainer.Controls.Add(item);
+            }
+            
+
+
         }
 
         private void SearchBox_TextChanged(object sender, EventArgs e)

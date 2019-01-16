@@ -17,17 +17,23 @@ namespace mchoice
         [STAThread]
         static void Main()
         {
-            //initialise Lucene
-            LuceneInit luIn = new LuceneInit();
+           // initialise Lucene
+           
+            LuceneInit luIn = new LuceneInit(true);
             SampleDataFileReader fileReader = new SampleDataFileReader();
             IEnumerable<SampleDataFileRow> row = fileReader.ReadAllRowsDB();
+            /*
+            foreach (SampleDataFileRow i in row) {
+                System.Diagnostics.Debug.WriteLine("debug: " + i.LineText+i.LineNumber+" id: "+i.Id);
+            }
+            */
             luIn.BuildIndex(row);
-
+            
 
             ////
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new testMainForm());
+            Application.Run(new Form1());
 
 
         }
